@@ -3,9 +3,9 @@ from termcolor import colored
 import random
 
 def findword():
-    with open("C:\Users\user\Wordle\Words") as file:
-        wordlist = f.read().splitlines()
-        return random.choice(word)
+    #don't forget that when open, use \\ not only \
+    file = open("C:\\Users\\user\\Wordle\\Words", "r")
+    wordlist = file.read().splitlines()
+    return random.choice(wordlist)
 
 word = findword()
-print(word)
