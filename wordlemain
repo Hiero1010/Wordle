@@ -5,7 +5,25 @@ import random
 def findword():
     #don't forget that when open, use \\ not only \
     file = open("C:\\Users\\user\\Wordle\\Words", "r")
-    wordlist = file.read().splitlines()
+    wordlist = file.readlines()
     return random.choice(wordlist)
 
 word = findword()
+
+def ready():
+    Rules = "Enter a five letter word" + "\n" + "If the letter turns green, it is in the right spot \nIf the letter turns yellow, it is the right letter but the wrong spot \nIf it stays dark, the letter is not in the word"
+    Start = input("If ready put start, to see rules put rules: ")
+    do = True
+    while do:
+        if Start == "start" or Start == "rules":
+            if Start == "start":
+                do = False
+            if Start == "rules":
+                print(Rules)
+                Start = Start = input("If ready put start, to see rules again put rules: ")
+        else:
+            Start = input("invalid, please enter start or rules: ")
+    return "Ready"
+print(ready())
+#def game():
+
