@@ -1,1 +1,11 @@
 #trying it out
+from termcolor import colored
+import random
+
+def findword():
+    with open("C:\Users\user\Wordle\Words") as file:
+        wordlist = f.read().splitlines()
+        return random.choice(word)
+
+word = findword()
+print(word)
